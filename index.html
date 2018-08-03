@@ -1,0 +1,703 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Design + Code a WordPress Theme</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+		<link rel="stylesheet" href="css/emoji.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			<section>
+				<h3>Welcome!</h3>
+				<hr>
+					<p>Follow Along with Today's Slides: <strong>https://goo.gl/xt5LXf</strong></p>
+					<hr>
+            <p>Install a <strong>Text Editor</strong>: <a href="https://atom.io/">Atom.io</a> </p>
+					<hr>
+					<p>Install an <strong>FTP Client</strong>: <a href="https://filezilla-project.org/">FileZilla-project.org</a>
+</p>
+
+
+
+
+        </section>
+				<section data-markdown>
+					# Design &amp; Code a WordPress Theme
+				</section>
+		<!-- Introductions -->
+				<section>
+ 				<section>
+				    <h2>About: Laura Eagin</h2>
+             <p>Graphic designer turned web developer slash entrepreneur. DIY-enthusiast. Cat &amp; Foster Cat Mom.</p>
+             <ul>
+	              <li>Twitter: <a href="http://www.twitter.com/choolaura">@chooLaura</a></li>
+	              <li>E-mail: <a href="mailto:lauraeagin@gmail.com">Laura@ellell.co</a></li>
+             </ul>
+				</section>
+				<section>
+				    <h2>About: Leeann Drees</h2>
+							<p>Web developer who loves to teach, read, and bake. Has unreasonably cute cats.</p>
+							<ul>
+								 <li>Twitter: <a href="http://www.twitter.com/leeanndrees">@leeanndrees</a></li>
+								 <li>E-mail: <a href="mailto:leeann@ellell.co">leeann@ellell.co</a></li>
+							</ul>
+				  </section>
+				<section>
+						<h2>About Us: ellell &amp; co.</h2>
+
+						<p>We work together at <a href="http://ellell.co" target="_blank">ellell &amp; co.</a>, the company we founded in 2014.</p>
+
+						<p>Every day we get to work with business owners and make WordPress work for them.</p>
+
+						<h2><i class="twa twa-dancers"></i></h2>
+					</section>
+					<section data-markdown>
+						## About Grand Circus
+
+					</section>
+					<!-- <section data-markdown>
+						## About TechTown
+
+						![Techtown Logo](lib/img/techtown-detroit.png)
+					</section> -->
+					<section>
+				    <h2>About You</h2>
+				    <ul style="width: 60%;">
+				      <li>What's your name?</li>
+				      <li>What are you excited to learn?</li>
+				      <!-- <li>What was your first concert? <i class="twa twa-guitar"></i></li> -->
+				    </ul>
+				  </section>
+				</section>
+		<!-- Class Overview -->
+				<section>
+					<section data-markdown>
+						### Class Overview
+
+
+						- Designing for WordPress
+						- Theme Structure
+						- PHP Crash Course
+						- Our First Page Template
+						- Applying Your Styles
+						- Resources + Questions
+					</section>
+					<section data-markdown>
+						We're going to cover a lot of ground!
+
+						Here's how to get the most out of it:
+
+						- Ask questions!
+						- Help each other out
+					</section>
+					<section data-markdown>
+						### Prerequisites:
+
+						- Familiarity with WordPress
+						- Basic understanding of HTML + CSS
+
+						_Bonus:_ You've used the Bootstrap grid
+					</section>
+				</section>
+		<!-- Set Up -->
+			<section>
+				<section data-markdown>
+					## Getting Set Up
+
+					For this class, we're going to use a fresh install of WordPress with placeholder content.
+
+					It'll be our playground for learning. Let's break things and fix them and try something new.
+				</section>
+					<section data-markdown>
+						## Set Up: Hosting
+
+						[A2Hosting](https://www.a2hosting.com/web-hosting) has generously offered free trial accounts, so we can see & share our work today.
+
+					</section>
+
+				<section>
+					<h3>Your Hosting Account C-Panel <i class="twa twa-ballot-box-with-check"></i></h3>
+
+					<a href="https://mi3-sr6.supercp.com:2083/">https://mi3-sr6.supercp.com:2083/</a>
+					<p>Log in to your C-Panel using the username/password on your handout</p>
+
+				</section>
+
+
+				<section>
+					<h3>Install WordPress <i class="twa twa-ballot-box-with-check"></i></h3>
+					<img src="lib/img/install-wordpress.png" alt="install wordpress" width="400">
+					<p>In your C-Panel you can create a fresh install of WordPress</p>
+				</section>
+				<section>
+					<h3>Log in to WordPress <i class="twa twa-ballot-box-with-check"></i></h3>
+
+					<p>Pro Tip: Make a bookmark so you don't lose this page.<p>
+
+				</section>
+
+				<section>
+					What does your site look like?
+				</section>
+
+				<section>
+					<h3>Import Demo Content <i class="twa twa-ballot-box-with-check"></i></h3>
+
+					<p>And let's import this starter content, so we have something to see on our new sites:</p>
+
+					<p><a href="https://ellell.co/workshop/WP-import.zip">Download Demo Content</a></p>
+
+					<small><em>Tools &gt; Import</em></small>
+				</section>
+			</section>
+
+<!-- Begin WordPress Talk -->
+
+				<section>
+					<section data-markdown>
+						## Ode To WordPress
+
+						- Why do we love it so?
+						- What is it good for?
+						- Is the sky the limit?
+					</section>
+				<section data-markdown>
+					## Some WordPress Websites
+
+					- [Grand Circus](https://grandcircus.co)
+					- [Time Magazine](http://time.com/)
+					- [ellell.co](http://ellell.co/)
+					- [tilda.com](http://tilda.com/)
+
+					[...and many more.](https://wordpress.org/showcase/)
+				</section>
+			</section>
+		<!-- Design -->
+			<section>
+				<section data-markdown>
+					## Designing for WordPress
+
+					- Design makes everything better.
+					- Colors / typography help you showcase content.
+					- Layouts / Proportions change too.
+					- A little CSS goes a long way!
+				</section>
+				<section data-markdown>
+					## The Old Way
+
+					- We designed full page layouts
+					- It'll look EXACTLY this way
+					- Oops...
+				</section>
+				<section data-markdown>
+					## The New Way
+
+					- It's responsive, it's supposed to adapt
+					- Design reusable pieces &amp; parts
+					- Adjust faster &amp; speed up the development process
+					- More Reading: [Atomic Design by Brad Frost](http://atomicdesign.bradfrost.com/)
+				</section>
+				<section>
+					<h2>Simple Style Tiles</h2>
+
+					<img src="lib/img/elise-chenier-branding-1.jpg" alt="style guide 1" width="310"/>
+					<img src="lib/img/elise-chenier-branding-3.jpg" alt="style guide 2" width="310"/>
+					<img src="lib/img/elise-chenier-branding-4.jpg" alt="style guide 3" width="310"/>
+
+					<small>More Reading: <a href="https://alistapart.com/article/creating-style-guides">Creating Style Guides - A List Apart</a></small>
+				</section>
+				<section>
+					<h2>Fisher Building Style</h2>
+					<img src="lib/img/fisher-building-style-guide.jpg" alt="style guide 1" width="500"/>
+				</section>
+				<section>
+					<h2>Okay Designers...</h2>
+					<ul>
+						<li>Let's do this!</li>
+						<li>Start with a blank style tile.</li>
+						<li><a href="http://goo.gl/ib5SQl" target="_blank">http://goo.gl/ib5SQl</a></li>
+					</ul>
+				</section>
+			</section>
+		<!-- Theme Structure -->
+		 	<section>
+				<section data-markdown>
+					## WordPress Theme Basics
+				</section>
+				<section data-markdown>
+					> A WordPress Theme is a collection of files that work together to produce a graphical interface with an underlying unifying design for a weblog. [...] A Theme modifies the way the site is displayed, without modifying the underlying software.
+
+					&mdash; The [WordPress Codex](https://codex.wordpress.org/Using_Themes)
+				</section>
+				<section data-markdown>
+					WordPress Theme Files are usually:
+
+					- PHP
+					- CSS
+					- JavaScript
+
+					Some themes also include images, fonts, and other assets.
+				</section>
+				<section data-markdown>
+					Most WordPress themes have these files:
+
+					- index.php
+					- screenshot.png
+					- style.css
+					- functions.php _(optional)_
+
+					Most themes have many more, too!
+				</section>
+				<section data-markdown>
+					### WordPress File Structure
+
+					Theme files live in `/wp-content/themes/`
+
+					![theme directory](lib/img/wp-content.png)
+				</section>
+				<!-- <section data-markdown>
+					# Show how that translates to a basic Customizer menu?
+				</section> -->
+				<section data-markdown>
+					### WordPress Theme Files:
+
+					![theme files](lib/img/theme-files.png)
+				</section>
+				<section data-markdown>
+					### The Theme You Make Can Be...
+
+					- Transferred to another website (or 10!)
+					- Released for free
+					- Sold
+
+					Because a theme is a simple set of files.
+
+				</section>
+				<section>
+					<h2>Questions?</h2>
+
+					<h2><i class="twa twa-happy-person-raising-one-hand-type-3"></i></h2>
+				</section>
+				<!-- <section data-markdown>
+					# Show how that translates to a super full Customizer menu?
+				</section> -->
+
+			</section>
+
+<!-- Begin Themeing -->
+
+			<section>
+				<section>
+					<h3>Install Starter Theme <i class="twa twa-ballot-box-with-check"></i></h3>
+
+					<p>Together, let's install this starter theme:</p>
+
+					<p><a href="http://ellell.co/workshop/ellell-starter-theme.zip" target="_blank">https://goo.gl/rci9aS</a></p>
+
+					<small><em>Appearances &gt; Themes</em></small>
+
+				</section>
+
+				<section>
+					<h3>Create Menus <i class="twa twa-ballot-box-with-check"></i></h3>
+					<ul>
+						<li>Make a new menu or two</li>
+						<li>Make sure you have a menu assigned to the theme's menu location</li>
+					</ul>
+					<p><small><em>(Appearance &gt; Menus)</em></small></p>
+				</section>
+
+
+				<section>
+					<h3>Set Up Widgets <i class="twa twa-ballot-box-with-check"></i></h3>
+					<ul>
+						<li>Add a few widgets to your sidebar</li>
+						<li>Add 1 widget to your footer</li>
+					</ul>
+					<p><small><em>(Appearance &gt; Widgets)</em></small></p>
+				</section>
+				<section data-markdown>
+					Look at your site with the new theme & content.
+
+					You should see:
+
+					- Pages with sidebars
+					- The widgets you added in sidebar + footer
+					- All pages & posts look the same
+				</section>
+				<section>
+					What is the starter theme doing?
+				</section>
+			</section>
+		<!-- Page Templates -->
+			<section>
+				<section data-markdown>
+					## Page Templates + PHP
+
+					- Without page templates, every page on your website looks exactly the same. That's boring!
+					- We're going to add a template for a full-width page by editing a PHP file.
+				</section>
+				<section>
+					<h3>But first...</h3>
+					<p><strong>You</strong>:</p>
+
+					<p>...but we don't know PHP! <i class="twa twa-grimacing"></i></p>
+
+					<p><strong>Me</strong>:</p>
+
+					<img src="lib/img/noworries.gif" alt="don't worry">
+				</section>
+				<section data-markdown>
+					### PHP Crash Course
+
+					- Lots of PHP files in WordPress are mostly made of your old friend HTML
+					- In fact, you can rename any `.html` file with `.php` and... it's a legit PHP file!
+					- For now, we only need to know a little bit of PHP syntax
+				</section>
+				<section>
+					<h3>PHP Crash Course</h3>
+
+					<ul>
+						<li>Less forgiving than HTML & CSS</li>
+						<li>White screen of death <i class="twa twa-skull-and-crossbones"></i></li>
+						<li>Error messages<i class="twa twa-scream"></i></li>
+						<li>When in doubt, paste your code into <a href="http://phpcodechecker.com">phpcodechecker.com</a></li>
+					</ul>
+				</section>
+				<!-- <section>
+					<h3>PHP Pro-Tips</h3>
+
+					<ul>
+						<li>PHP code needs to be enclosed in opening <code>&lt;?php</code> and closing <code>?&gt;</code> tags</li>
+						<li>Decide on single or double quotation marks and be consistent*</li>
+						<li>Pay attention to semicolons!</li>
+					</ul>
+
+					<p><small>* Do as I say, not as I do</small></p>
+				</section> -->
+				<section>
+					<h3>PHP: What does it look like?</h3>
+					<pre>
+						<code>
+&lt;?php echo "Hello world"; ?&gt;
+
+&lt;?php get_header(); ?&gt;
+
+&lt;?php //This is a short comment ?&gt;
+
+&lt;?php /* This is a looooong
+comment */ ?&gt;
+						</code>
+					</pre>
+				</section>
+				<!--
+				<section>
+					<h3>WordPress PHP: Some fun functions</h3>
+					<pre>
+						<code>
+&lt;?php get_header(); ?&gt;
+&lt;?php the_title('<h2>', '</h2>'); ?&gt;
+&lt;?php the_content(); ?&gt;
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>WordPress PHP: The Loop</h3>
+					<p>This code is the <i class="twa twa-heart"></i> of WordPress</p>
+					<pre>
+						<code>
+&lt;?php while(have_posts()) : the_post(); ?>
+      &lt;h2>&lt;?php the_title(); ?>&lt;/h2>
+      &lt;?php the_content(); ?>
+&lt;?php endwhile; ?>
+						</code>
+					</pre>
+				</section> -->
+				<section data-markdown>
+					### PHP: WTF?
+
+					PHP stands for "PHP: Hypertext Processor"
+
+					![recursive](lib/img/recursive.gif)
+				</section>
+			</section>
+			<section>
+				<section data-markdown>
+					## Adding a Page Template
+				</section>
+
+					<section data-markdown>
+						## Accessing Our Theme Files: FTP
+
+						We will be using an FTP client to move files around.
+
+						[![download filezilla logo](lib/img/filezilla-logo.png "Filezilla")](https://filezilla-project.org/)
+
+						Download & install [Filezilla](https://filezilla-project.org/)
+
+
+					</section>
+	<!--				<section data-markdown>
+						## FileZilla Settings
+
+						In FileZilla:
+
+						_Settings &gt; File Editing &gt; Default Editor_
+
+						Set Atom as your default editor
+
+					</section>
+	-->
+
+				<section data-markdown>
+					## Connect with FTP
+					- Log into your CPanel
+					- Click "FTP Accounts"
+					- Scroll down to "Special FTP Accounts"
+					- Find your username and click "Configure FTP Client"
+					- Download the FileZilla SFTP configuration file
+				</section>
+				<section data-markdown>
+					## Connect with FTP
+					- Filezilla: _File &gt; Import_
+					- Import your configuration file
+					- Open the Site Manager (_File &gt; Site Manager_)
+					- Select your website &amp; connect!
+				</section>
+				<section>
+					<h2>Using FTP</h2>
+					<ul>
+						<li>Navigate to <em>public_html/wp-content/themes/ellell-starter-theme</em></li>
+						<li>Open the file <code>page.php</code></li>
+						<li>What is making the sidebar appear?</li>
+					</ul>
+
+					<p>(Don't make any changes yet!)</p>
+				</section>
+				<section data-markdown>
+					1. Open `template-full.php`
+					1. How is it different from `page.php`?
+					1. Remove that sidebar!
+					1. Make the main column full-width.
+
+					------
+					 Save your changes & allow FileZilla to upload your updated file.
+				</section>
+				<section
+					<p>Let's see it in action!</p>
+					<ul>
+						<li>Create a new page in WordPress</li>
+						<li>Select "Full-Width Page" as your template</li>
+						<li>Preview your new page</li>
+						<li>Tada! <i class="twa twa-tada"></i></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Questions?</h2>
+
+					<h2><i class="twa twa-happy-person-raising-one-hand-type-6"></i></h2>
+				</section>
+			</section>
+
+		<!-- CSS Time -->
+			<section>
+				<section data-markdown>
+					## Customize with CSS!
+
+					- CSS helps us style...
+						- colors
+						- fonts
+						- spacing
+						- how links look
+						- and a million other things
+				</section>
+				<section>
+					<h3>Style.css</h3>
+				</section>
+				<section>
+					<h3>Questions?</h3>
+
+					<h2><i class="twa twa-happy-person-raising-one-hand-type-3"></i></h2>
+				</section>
+			</section>
+
+		<!-- Fun with PHP -->
+			<section>
+				<section data-markdown>
+					## More Fun with PHP
+				</section>
+				<section>
+					<p class="left">In <code>index.php</code>, replace this:</p>
+
+					<pre>
+						<code>
+the_content();
+						</code>
+					</pre>
+
+					<p class="left">...with this:</p>
+
+					<pre>
+						<code>
+the_excerpt();
+						</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					Refresh your homepage.
+
+					What happened?
+
+					[More about the_excerpt()](https://developer.wordpress.org/reference/functions/the_excerpt/)
+				</section>
+				<section data-markdown>
+					By default, the WordPress excerpt ends with [...] and doesn't link anywhere.
+
+					Let's change that.
+				</section>
+				<section>
+					<p>In <code>functions.php</code>, remove the <code>//</code> in front of lines 36-39, so you have the following:</p>
+					<pre>
+						<code>
+// Custom Excerpt
+function ellelltheme_excerpt($more) {
+  return ' &amp;hellip; &lt;a href="'.get_permalink().'">Continue Reading &amp;rarr;&lt;/a>';
+}
+add_filter('excerpt_more', 'ellelltheme_excerpt');
+						</code>
+					</pre>
+				</section>
+			</section>
+		<!-- Screnshot.png -->
+		<section>
+			<section data-markdown>
+				## Update Theme Screenshot!
+			</section>
+			<section data-markdown>
+				- Themes always have a `screenshot.png` that shows the theme image we'll see in WordPress.
+				- Now that your theme looks signficantly different than our starter, take a new screenshot and save it as _screenshot.png_
+				- Upload your new screenshot to your theme via FTP.
+
+				[How to take a screenshot](http://lifehacker.com/5825771/how-to-take-a-screenshot-or-picture-of-whats-on-your-computer-screen)
+			</section>
+		</section>
+		<!-- Questions -->
+		<section>
+			<section>
+				<h2>Questions?</h2>
+
+				<h2><i class="twa twa-happy-person-raising-one-hand-type-5"></i></h2>
+			</section>
+		</section>
+		<!-- Resources -->
+		<section>
+		<section data-markdown>
+				## Resources: Our Faves
+
+				- [Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
+				- [Visual Template Hierarchy](https://wphierarchy.com/)
+				- [GenerateWP](https://generatewp.com/)
+				- [WP Beginner](http://www.wpbeginner.com/blog/)
+				- [WPMU Dev](https://premium.wpmudev.org/blog/)
+				- [Don't Fear the Custom Theme](https://speakerdeck.com/linnalexandra/dont-fear-the-custom-theme-how-to-build-a-custom-wordpress-theme-with-only-four-files-1)
+			</section>
+		<!-- <section data-markdown>
+				## Resources: Your Requests
+
+				- [More about Filler Content](https://www.elegantthemes.com/blog/tips-tricks/how-to-add-dummy-text-to-wordpress-and-why-youd-want-to)
+				- [Child Theme Documentation](https://developer.wordpress.org/themes/advanced-topics/child-themes/#how-to-create-a-child-theme)
+				- [Coolors](https://coolors.co/)
+				- [WebAIM Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+		</section> -->
+		<section data-markdown>
+				## Resources: IRL
+
+				- [WordCamp Detroit](https://2018.detroit.wordcamp.org/)
+				- [Metro Detroit WordPress Meetup](https://www.meetup.com/metro-detroit-wordpress-meetup/?_cookie-check=gyNREIxBm0LMb9Fz)
+		</section>
+		</section>
+		<section>
+			<h2>Thanks!</h2>
+			<p>Keep in touch!</p>
+
+			<p>@ellellco <i class="twa twa-small-blue-diamond"></i> @grandcircusco</p>
+			<p>@leeanndrees <i class="twa twa-small-blue-diamond"></i> @choolaura</p>
+		</section>
+		<!-- Additional Content We Ran Out Of Time For -->
+		<!-- <section>
+			<section data-markdown>
+				## Extra Credit
+			</section>
+				<!-- Building a Homepage -->
+				<!-- <section data-markdown>
+					## Custom Homepage
+
+					![custom homepage screenshot](lib/img/homepage-mockup.jpg)
+				</section>
+				<section data-markdown>
+					### The Challenge
+
+					Code a homepage that has the following features:
+
+					- A large area to display page content
+					- 3 blog posts, in 3 columns, with a title & excerpt
+					- Wireframe on the next slide!
+			</section>
+			<section data-markdown>
+				Wireframe goes here (maybe as the slide background?)
+			</section>
+			<section data-markdown>
+				### Getting Started
+
+				1. Copy the contents of `index.html` into a new file
+				1. Save the new file as `front-page.php`
+				1. In _Settings &gt; Reading_, set a specific homepage
+			</section>
+			<section data-markdown>
+				### Reference
+
+				- [Bootstrap CSS Grid](http://getbootstrap.com/css/#grid)
+				- [The WordPress Loop](https://codex.wordpress.org/The_Loop)
+			</section>
+		</section> -->
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
