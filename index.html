@@ -83,7 +83,7 @@
 				    <ul style="width: 60%;">
 				      <li>What's your name?</li>
 				      <li>What are you excited to learn?</li>
-				      <!-- <li>What was your first concert? <i class="twa twa-guitar"></i></li> -->
+				      <li>What languages do you speak?<i class="twa twa-guitar"></i></li>
 				    </ul>
 				  </section>
 				</section>
@@ -91,7 +91,6 @@
 				<section>
 					<section data-markdown>
 						### Class Overview
-
 
 						- Designing for WordPress
 						- Theme Structure
@@ -141,12 +140,6 @@
 
 				</section>
 
-
-				<section>
-					<h3>Install WordPress <i class="twa twa-ballot-box-with-check"></i></h3>
-					<img src="lib/img/install-wordpress.png" alt="install wordpress" width="400">
-					<p>In your C-Panel you can create a fresh install of WordPress</p>
-				</section>
 				<section>
 					<h3>Log in to WordPress <i class="twa twa-ballot-box-with-check"></i></h3>
 
@@ -154,19 +147,14 @@
 
 				</section>
 
-				<section>
-					What does your site look like?
+				<section data-markdown>
+					## What does your basic website look like?
 				</section>
 
-				<section>
-					<h3>Import Demo Content <i class="twa twa-ballot-box-with-check"></i></h3>
-
-					<p>And let's import this starter content, so we have something to see on our new sites:</p>
-
-					<p><a href="https://ellell.co/workshop/WP-import.zip">Download Demo Content</a></p>
-
-					<small><em>Tools &gt; Import</em></small>
+				<section data-markdown>
+					## What about when I switch themes?
 				</section>
+
 			</section>
 
 <!-- Begin WordPress Talk -->
@@ -190,6 +178,7 @@
 					[...and many more.](https://wordpress.org/showcase/)
 				</section>
 			</section>
+
 		<!-- Design -->
 			<section>
 				<section data-markdown>
@@ -224,23 +213,32 @@
 
 					<small>More Reading: <a href="https://alistapart.com/article/creating-style-guides">Creating Style Guides - A List Apart</a></small>
 				</section>
-				<section>
-					<h2>Fisher Building Style</h2>
-					<img src="lib/img/fisher-building-style-guide.jpg" alt="style guide 1" width="500"/>
-				</section>
-				<section>
-					<h2>Okay Designers...</h2>
-					<ul>
-						<li>Let's do this!</li>
-						<li>Start with a blank style tile.</li>
-						<li><a href="http://goo.gl/ib5SQl" target="_blank">http://goo.gl/ib5SQl</a></li>
-					</ul>
-				</section>
+			</section>
+
+						<!-- What We're Building Today -->
+			<section>
+						<section data-markdown>
+							## What We're Building Today
+						</section>
+
+						<section data-markdown>
+							## Mockup
+						</section>
+
+						<section data-markdown>
+							## Wireframe
+						</section>
+
+						<section>
+							<h2>Our Theme Style Tile</h2>
+							<img src="lib/img/fisher-building-style-guide.jpg" alt="style guide 1" width="500"/>
+						</section>
+
 			</section>
 		<!-- Theme Structure -->
 		 	<section>
 				<section data-markdown>
-					## WordPress Theme Basics
+					## What Makes up a Theme
 				</section>
 				<section data-markdown>
 					> A WordPress Theme is a collection of files that work together to produce a graphical interface with an underlying unifying design for a weblog. [...] A Theme modifies the way the site is displayed, without modifying the underlying software.
@@ -291,62 +289,89 @@
 					Because a theme is a simple set of files.
 
 				</section>
+
+				<section data-markdown>
+					## Accessing Our Theme Files: FTP
+
+					We will be using an FTP client to move files around.
+
+					[![download filezilla logo](lib/img/filezilla-logo.png "Filezilla")](https://filezilla-project.org/)
+
+					Download & install [Filezilla](https://filezilla-project.org/)
+
+
+				</section>
+
+
+				<section data-markdown>
+					## Let's Connect to FTP
+				</section>
+
+			<section data-markdown>
+				## Connect with FTP
+				- Filezilla: _File &gt; Import_
+				- Import your configuration file
+				- Open the Site Manager (_File &gt; Site Manager_)
+				- Select your website &amp; connect!
+			</section>
+
+
+			<section data-markdown>
+				## One Last FileZilla Setting
+
+				In FileZilla:
+
+				_Settings &gt; File Editing &gt; Default Editor_
+
+				Set Atom as your default editor
+
+			</section>
+
+			<section>
+				<h2>Questions?</h2>
+
+				<h2><i class="twa twa-happy-person-raising-one-hand-type-3"></i></h2>
+			</section>
+
+			</section>
+
+	<!-- CSS Time -->
+		<section>
+			<section data-markdown>
+				## Customize with CSS
+
+				- CSS helps us style...
+					- colors
+					- fonts
+					- spacing
+					- how links look
+					- and a million other things
+			</section>
+			<section>
+				<h3>Style.css</h3>
+			</section>
+
 				<section>
-					<h2>Questions?</h2>
+					<h2>Questions About CSS?</h2>
 
 					<h2><i class="twa twa-happy-person-raising-one-hand-type-3"></i></h2>
 				</section>
-				<!-- <section data-markdown>
-					# Show how that translates to a super full Customizer menu?
-				</section> -->
-
 			</section>
 
-<!-- Begin Themeing -->
-
+<!-- Menus -->
 			<section>
-				<section>
-					<h3>Install Starter Theme <i class="twa twa-ballot-box-with-check"></i></h3>
-
-					<p>Together, let's install this starter theme:</p>
-
-					<p><a href="http://ellell.co/workshop/ellell-starter-theme.zip" target="_blank">https://goo.gl/rci9aS</a></p>
-
-					<small><em>Appearances &gt; Themes</em></small>
-
-				</section>
-
-				<section>
-					<h3>Create Menus <i class="twa twa-ballot-box-with-check"></i></h3>
-					<ul>
-						<li>Make a new menu or two</li>
-						<li>Make sure you have a menu assigned to the theme's menu location</li>
-					</ul>
-					<p><small><em>(Appearance &gt; Menus)</em></small></p>
-				</section>
-
-
-				<section>
-					<h3>Set Up Widgets <i class="twa twa-ballot-box-with-check"></i></h3>
-					<ul>
-						<li>Add a few widgets to your sidebar</li>
-						<li>Add 1 widget to your footer</li>
-					</ul>
-					<p><small><em>(Appearance &gt; Widgets)</em></small></p>
-				</section>
 				<section data-markdown>
-					Look at your site with the new theme & content.
-
-					You should see:
-
-					- Pages with sidebars
-					- The widgets you added in sidebar + footer
-					- All pages & posts look the same
+					## Menus
 				</section>
+
 				<section>
-					What is the starter theme doing?
+					<h2>Questions About Menus?</h2>
+
+					<h2><i class="twa twa-happy-person-raising-one-hand-type-3"></i></h2>
 				</section>
 			</section>
+
+
 		<!-- Page Templates -->
 			<section>
 				<section data-markdown>
@@ -382,9 +407,8 @@
 						<li>When in doubt, paste your code into <a href="http://phpcodechecker.com">phpcodechecker.com</a></li>
 					</ul>
 				</section>
-				<!-- <section>
+				<section>
 					<h3>PHP Pro-Tips</h3>
-
 					<ul>
 						<li>PHP code needs to be enclosed in opening <code>&lt;?php</code> and closing <code>?&gt;</code> tags</li>
 						<li>Decide on single or double quotation marks and be consistent*</li>
@@ -392,7 +416,8 @@
 					</ul>
 
 					<p><small>* Do as I say, not as I do</small></p>
-				</section> -->
+				</section>
+
 				<section>
 					<h3>PHP: What does it look like?</h3>
 					<pre>
@@ -408,7 +433,7 @@ comment */ ?&gt;
 						</code>
 					</pre>
 				</section>
-				<!--
+
 				<section>
 					<h3>WordPress PHP: Some fun functions</h3>
 					<pre>
@@ -430,68 +455,30 @@ comment */ ?&gt;
 &lt;?php endwhile; ?>
 						</code>
 					</pre>
-				</section> -->
-				<section data-markdown>
-					### PHP: WTF?
-
-					PHP stands for "PHP: Hypertext Processor"
-
-					![recursive](lib/img/recursive.gif)
 				</section>
+
 			</section>
 			<section>
 				<section data-markdown>
-					## Adding a Page Template
+					## Page templates
 				</section>
-
-					<section data-markdown>
-						## Accessing Our Theme Files: FTP
-
-						We will be using an FTP client to move files around.
-
-						[![download filezilla logo](lib/img/filezilla-logo.png "Filezilla")](https://filezilla-project.org/)
-
-						Download & install [Filezilla](https://filezilla-project.org/)
-
-
-					</section>
-	<!--				<section data-markdown>
-						## FileZilla Settings
-
-						In FileZilla:
-
-						_Settings &gt; File Editing &gt; Default Editor_
-
-						Set Atom as your default editor
-
-					</section>
-	-->
 
 				<section data-markdown>
-					## Connect with FTP
-					- Log into your CPanel
-					- Click "FTP Accounts"
-					- Scroll down to "Special FTP Accounts"
-					- Find your username and click "Configure FTP Client"
-					- Download the FileZilla SFTP configuration file
+					## Applying a Page Template
 				</section>
-				<section data-markdown>
-					## Connect with FTP
-					- Filezilla: _File &gt; Import_
-					- Import your configuration file
-					- Open the Site Manager (_File &gt; Site Manager_)
-					- Select your website &amp; connect!
-				</section>
-				<section>
-					<h2>Using FTP</h2>
-					<ul>
-						<li>Navigate to <em>public_html/wp-content/themes/ellell-starter-theme</em></li>
-						<li>Open the file <code>page.php</code></li>
-						<li>What is making the sidebar appear?</li>
-					</ul>
 
-					<p>(Don't make any changes yet!)</p>
-				</section>
+
+					<section>
+						<h2>Sidebar</h2>
+						<ul>
+							<li>Navigate to <em>public_html/wp-content/themes/ellell-starter-theme</em></li>
+							<li>Open the file <code>page.php</code></li>
+							<li>What is making the sidebar appear?</li>
+						</ul>
+
+						<p>(Don't make any changes yet!)</p>
+					</section>
+
 				<section data-markdown>
 					1. Open `template-full.php`
 					1. How is it different from `page.php`?
@@ -517,27 +504,7 @@ comment */ ?&gt;
 				</section>
 			</section>
 
-		<!-- CSS Time -->
-			<section>
-				<section data-markdown>
-					## Customize with CSS!
 
-					- CSS helps us style...
-						- colors
-						- fonts
-						- spacing
-						- how links look
-						- and a million other things
-				</section>
-				<section>
-					<h3>Style.css</h3>
-				</section>
-				<section>
-					<h3>Questions?</h3>
-
-					<h2><i class="twa twa-happy-person-raising-one-hand-type-3"></i></h2>
-				</section>
-			</section>
 
 		<!-- Fun with PHP -->
 			<section>
