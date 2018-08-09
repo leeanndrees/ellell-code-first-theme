@@ -552,23 +552,40 @@ add_filter('excerpt_more', 'ellelltheme_excerpt');
 				## Widgets
 			</section>
 			<section data-markdown>
-				[Quick refresher on what widgets are]
+				### A Refresher
+
+				- Widgets are content areas that can be added to your theme's _widget areas_, which often include sidebars, footers, and headers
+				- Widgets can display dynamic content from your site or social media
+
 			</section>
 			<section data-markdown>
 				Register widget areas in `functions.php`
+
+				- Uncomment lines 23 - 52
+				- Highlight lines & use keyboard shortcut **ctrl + /**
 			</section>
 			<section data-markdown>
 				- Check _Appearance &gt; Widgets_ to see your new widget areas
 				- And add some widgets!
 			</section>
 			<section>
-				<ul>
-					<li>Pull our widgets into `front-page.php`</li>
-				</ul>
-				<p>[add code]</p>
+				<p>Pull our widgets into <code>front-page.php</code></p>
+
+					<pre>
+						<code>
+&lt;?php dynamic_sidebar('homepage'); ?&gt;
+						</code>
+					</pre>
+
 			</section>
 			<section>
-				Display footer widgets in <code>footer.php</code>
+				<p>Display footer widgets in <code>footer.php</code>
+
+					<pre>
+						<code>
+&lt;?php dynamic_sidebar('footer1'); ?&gt;
+						</code>
+					</pre>
 			</section>
 		</section>
 
