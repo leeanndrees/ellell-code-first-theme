@@ -1,4 +1,4 @@
-# Design + Code a WordPress theme
+# Code a WordPress theme
 
 ## Workshop Curriculum
 
