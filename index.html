@@ -508,28 +508,13 @@ comment */ ?&gt;
 				<section data-markdown>
 					## More Fun with PHP
 				</section>
-				<section>
-					<p class="left">In <code>index.php</code>, replace this:</p>
-
-					<pre>
-						<code>
-the_content();
-						</code>
-					</pre>
-
-					<p class="left">...with this:</p>
-
-					<pre>
-						<code>
-the_excerpt();
-						</code>
-					</pre>
+				<section data-markdown>
+					Let's add blog posts to `front-page.php`
 				</section>
 				<section data-markdown>
-					Refresh your homepage.
-
-					What happened?
-
+					Let's show only post excerpts on `front-page.php`
+				</section>
+				<section data-markdown>
 					[More about the_excerpt()](https://developer.wordpress.org/reference/functions/the_excerpt/)
 				</section>
 				<section data-markdown>
@@ -550,8 +535,42 @@ add_filter('excerpt_more', 'ellelltheme_excerpt');
 					</pre>
 				</section>
 			</section>
-		<!-- Screnshot.png -->
+
+		<!-- Widgets -->
 		<section>
+			<section data-markdown>
+				## Widgets
+			</section>
+			<section data-markdown>
+				[Quick refresher on what widgets are]
+			</section>
+			<section data-markdown>
+				Register widget areas in `functions.php`
+			</section>
+			<section data-markdown>
+				- Check _Appearance &gt; Widgets_ to see your new widget areas
+				- And add some widgets!
+			</section>
+			<section>
+				<ul>
+					<li>Pull our widgets into `front-page.php`</li>
+				</ul>
+				<p>[add code]</p>
+			</section>
+			<section>
+				Display footer widgets in <code>footer.php</code>
+			</section>
+		</section>
+
+		<!-- CSS Layout -->
+		<section>
+			<section data-markdown>
+				## CSS Layout
+			</section>
+		</section>
+
+		<!-- Screnshot.png -->
+		<!-- <section>
 			<section data-markdown>
 				## Update Theme Screenshot!
 			</section>
@@ -562,7 +581,9 @@ add_filter('excerpt_more', 'ellelltheme_excerpt');
 
 				[How to take a screenshot](http://lifehacker.com/5825771/how-to-take-a-screenshot-or-picture-of-whats-on-your-computer-screen)
 			</section>
-		</section>
+		</section> -->
+
+		
 		<!-- Questions -->
 		<section>
 			<section>
