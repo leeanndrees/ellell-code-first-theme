@@ -311,16 +311,10 @@
 					## Let's Connect to FTP
 				</section>
 
-				<section data-markdown>
-					[need instructions to download FTP config file]
-				</section>
-
 			<section data-markdown>
 				## Connect with FTP
-				- Filezilla: _File &gt; Import_
-				- Import your configuration file
-				- Open the Site Manager (_File &gt; Site Manager_)
-				- Select your website &amp; connect!
+				- In FileZilla, open the Site Manager (_File &gt; Site Manager_)
+				- Use the information on your handout to connect to your site
 			</section>
 
 
@@ -519,30 +513,30 @@ comment */ ?&gt;
 					## More Fun with PHP
 				</section>
 				<section data-markdown>
-					Let's add blog posts to `front-page.php`
+					- Let's add blog posts to `front-page.php`
+					- Our blog post markup already exists in a file called `home-blog.php`
+				</section>
+				<section>
+					<p>Display code from <code>home-blog.php</code> on <br><code>front-page.php</code>:</p>
+
+<pre>
+	<code>
+&lt;?php get_template_part('home-blog'); ?&gt;
+	</code>
+</pre>
 				</section>
 				<section data-markdown>
-					Let's show only post excerpts on `front-page.php`
+					Let's show post content in `home-blog.php`
 				</section>
 				<section data-markdown>
+					Let's switch from full post content to post excerpts in `home-blog.php`
+
 					[More about the_excerpt()](https://developer.wordpress.org/reference/functions/the_excerpt/)
 				</section>
 				<section data-markdown>
 					By default, the WordPress excerpt ends with [...] and doesn't link anywhere.
 
-					Let's change that.
-				</section>
-				<section>
-					<p>In <code>functions.php</code>, remove the <code>//</code> in front of lines 36-39, so you have the following:</p>
-					<pre>
-						<code>
-// Custom Excerpt
-function ellelltheme_excerpt($more) {
-  return ' &amp;hellip; &lt;a href="'.get_permalink().'">Continue Reading &amp;rarr;&lt;/a>';
-}
-add_filter('excerpt_more', 'ellelltheme_excerpt');
-						</code>
-					</pre>
+					Let's change that in `functions.php`.
 				</section>
 			</section>
 
@@ -561,22 +555,11 @@ add_filter('excerpt_more', 'ellelltheme_excerpt');
 			<section data-markdown>
 				Register widget areas in `functions.php`
 
-				- Uncomment lines 23 - 52
-				- Highlight lines & use keyboard shortcut **ctrl + /**
+				- You can uncomment lots of code at once by highlighting lines & using keyboard shortcut **ctrl + /**
 			</section>
 			<section data-markdown>
 				- Check _Appearance &gt; Widgets_ to see your new widget areas
 				- And add some widgets!
-			</section>
-			<section>
-				<p>Pull our widgets into <code>front-page.php</code></p>
-
-					<pre>
-						<code>
-&lt;?php dynamic_sidebar('homepage'); ?&gt;
-						</code>
-					</pre>
-
 			</section>
 			<section>
 				<p>Display footer widgets in <code>footer.php</code>
@@ -592,7 +575,7 @@ add_filter('excerpt_more', 'ellelltheme_excerpt');
 		<!-- CSS Layout -->
 		<section>
 			<section data-markdown>
-				## CSS Layout
+				## More CSS Styling
 			</section>
 		</section>
 
@@ -642,8 +625,8 @@ add_filter('excerpt_more', 'ellelltheme_excerpt');
 		<section data-markdown>
 				## Resources: IRL
 
-				- [WordCamp Detroit](https://2018.detroit.wordcamp.org/)
 				- [Metro Detroit WordPress Meetup](https://www.meetup.com/metro-detroit-wordpress-meetup/?_cookie-check=gyNREIxBm0LMb9Fz)
+				- [WordCamp](https://central.wordcamp.org/)
 		</section>
 		</section>
 		<section>
